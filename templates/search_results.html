@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Search Results</h1><br>
+        <h3>Owner: {{ results.owner.username }}<br>
+        Name: {{ results.name }}<br>
+        Date: {{ results.date }}<br>
+        Content: {{ results.content }}<br>
+{% endblock content %}

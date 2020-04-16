@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 style="text-align: center">Home</h1>
+<hr>
+    {% for post in posts %}
+        <article class="media content-section" style="text-align: center">
+          <div class="media-body">
+            <div class="article-metadata">
+              username: <a class="mr-2" href="#">{{ post.owner.username }}</a><br>
+              created date: <small class="text-muted">{{ post.date }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.name }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+        <hr>
+    {% endfor %}
+{% endblock content %}
